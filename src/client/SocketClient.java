@@ -104,6 +104,7 @@ public class SocketClient {
                 ChatMessage receivedMessage = (ChatMessage) getServerReply();
                 if (receivedMessage.getFile() != null) {
                     writeFile(receivedMessage.getMessage(), receivedMessage.getFile());
+                    System.out.println("Received file: " + Paths.get(receivedMessage.getMessage()).getFileName().toString());
                 } else {
                     System.out.println(receivedMessage.getSenderName() + ": " + receivedMessage.getMessage());
                 }
@@ -117,7 +118,7 @@ public class SocketClient {
     }
 
     private void writeFile(String filePath, byte[] bytes) throws IOException {
-        Files.write(Paths.get(filePath), bytes);
+        Files.write(Paths.get(filePath).getFileName(), bytes);
     }
 
     private byte[] readFile(String filePath) throws IOException {

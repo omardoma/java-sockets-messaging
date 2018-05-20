@@ -1,6 +1,6 @@
 # java-sockets-messaging
 
-An implementation of a multi-threaded Client/Server based tcp sockets CLI messenger app for real-time group/private chatting in Java.
+An implementation of a multi-threaded Client/Server based tcp sockets CLI messenger app for real-time group/private text/multimedia chatting in Java.
 
 Currently the messenger is CLI based, however this is just a proof of concept and it can be extended by building a GUI using Swing/JavaFX.
 
