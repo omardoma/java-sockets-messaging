@@ -78,14 +78,12 @@ public class SocketServer {
     }
 
     public static void main(String[] args) throws IOException {
-        SocketServer server = null;
+        SocketServer server = new SocketServer(20);
         try {
-            server = new SocketServer(20);
             server.listen(6000);
         } catch (IOException e) {
             e.printStackTrace();
             server.killServer();
-//            System.exit(1);
         }
     }
 }
