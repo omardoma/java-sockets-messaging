@@ -73,8 +73,8 @@ public class SocketServerThread implements Runnable {
                         sT.sendToClient(message);
                     }
                 }
+                break;
             }
-            break;
         }
     }
 
